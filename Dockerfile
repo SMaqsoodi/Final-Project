@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 #FROM openjdk:16-alpine3.13
 FROM nginx:alpine
-RUN apt update && apk add openjdk8
+RUN apk add openjdk8
 WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
