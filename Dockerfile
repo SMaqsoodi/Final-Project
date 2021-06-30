@@ -6,7 +6,7 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 RUN ./mvnw dependency:go-offline
-COPY src ./src
+COPY src .
 CMD ["./mvnw", "spring-boot:run"]
 EXPOSE 80
 #ENTRYPOINT ["java", "-jar", "capstone-easypay.jar"]
